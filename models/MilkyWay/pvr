@@ -1,0 +1,22 @@
+device xterm
+erase
+expand 1.5
+data vr.dat
+read r 1
+read vd 2
+read vb 3
+read vh 4
+read vt 5
+limits 0 25 vt
+box
+xlabel R
+ylabel v
+ltype 0
+connect r vd
+ltype 1
+connect r vb
+ltype 2
+connect r vh
+ltype 3
+connect r vt
+quit
