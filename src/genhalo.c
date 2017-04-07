@@ -38,12 +38,25 @@ void gen_halo(int nptcl, int myseed, float *buffer, int verbose)
   mysrand(myseed);
   icofm =1;
 
-  if (nobj <= 0)
+  if (nobj < 0)
   {
     fquery("Enter streaming fraction",&stream);
     iquery("Enter the number of particles",&nobj);
     iquery("Enter negative integer seed",&seed);
     iquery("Center particles (0=no, 1=yes)",&icofm);
+  }
+  else
+  {
+	  //Read in.bulge to retrieve the stream parameter
+	  FILE *f = fopen("in.halo", "r");
+	  if (f == NULL)
+	  {
+		  fprintf(stderr,"Failed to open in.halo, this file is required for the parallel execution\n");
+		  exit(-1);
+	  }
+	  fscanf(f,"%f", &stream);
+	  fclose(f);
+	  fprintf(stderr,"Read halo stream parameter: %f \n", stream);
   }
   /*	cquery("Enter harmonics file",harmfile); */
 

@@ -53,7 +53,7 @@ void gen_disk(int nptcl, int myseed, float *buffer, int verbose)
   seed = myseed;
   mysrand(myseed);
   icofm = 1;
-  if (nobj <= 0)
+  if (nobj < 0)
   {
     iquery("Enter the number of particles",&nobj);
     iquery("Enter negative integer seed",&seed);
