@@ -21,39 +21,35 @@ To compile Galactics:
 
 To generate Initial conditions:
 
-	Take the following steps:
-	- Setup your model as you would normally do in Galactics
-	- Run make and wait untill the following files are generated:
-		cordbh.dat dbh.dat freqdbh.dat mr.dat denspsibulge.dat denspsihalo.dat
+Take the following steps:
+- Setup your model as you would normally do in Galactics
+- Run make and wait untill the following files are generated:
+	cordbh.dat dbh.dat freqdbh.dat mr.dat denspsibulge.dat denspsihalo.dat
 
-	- Once the above files are generated you can interrupt Galactics.
-	- Copy the above files to the folder from which you run Bonsai 
-	- Modify/create the file 'component_numbers.txt'. This file is used to determine 
-          the ratio's between the number of particles in the Halo, Bulge and Disk.
+- Once the above files are generated you can interrupt Galactics.
+- Copy the above files to the folder from which you run Bonsai 
+- Modify/create the file 'component_numbers.txt'. This file is used to determine 
+  the ratio's between the number of particles in the Halo, Bulge and Disk.
 
- 	It should contain on the first line three numbers:
-	nHalo nBulge nDisk
+The component_numbers.txt file should contain on the first line three numbers:
+nHalo nBulge nDisk
 
-	Again these numbers will be converted to ratio's based on the actual number of particles that are requested using 
-	the Bonsai parameter: --milkyway nParticlesPerNode .
-	- Now you are ready to run Bonsai and generate the IC
+Again these numbers will be converted to ratio's based on the actual number of particles that are requested using 
+the Bonsai parameter: --milkyway nParticlesPerNode .
+- Now you are ready to run Bonsai and generate the IC
 
 
 
 When using this code make sure to cite the original authors:
-
-K - Kuijken, K.; Dubinski, J. 1995  (1995MNRAS.277.1341K) 
-Widrow & Dubinski 2005 		(2005ApJ...631..838W)  
-Widrow, Pym and Dubinski 2008 ( 2008ApJ...679.1239W )
-
-
-Evghenii Gaburov
-Jeroen Bédorf
-
-=============================================================
+- Kuijken, K.; Dubinski, J. 1995  (1995MNRAS.277.1341K) 
+- Widrow & Dubinski 2005 		(2005ApJ...631..838W)  
+- Widrow, Pym and Dubinski 2008 ( 2008ApJ...679.1239W )
 
 
-GalactICS Quickstart Manual
+Evghenii Gaburov & Jeroen Bédorf
+ 
+ 
+#GalactICS Quickstart Manual
 
 GalactICS is a package for generating realistic models of galaxies that
 can optionally include a disk, bulge, dark halo and central supermassive 
